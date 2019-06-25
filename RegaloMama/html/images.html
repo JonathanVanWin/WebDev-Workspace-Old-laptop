@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/images_styles.css">
+  <title>Images</title>
+</head>
+
+<body>
+  <div class="container" id="nav_menu">
+    <span class="my_header">Menu</span>
+    <ul>
+      <li class="list_it"><a href="index.html">Home</a></li>
+      <li class="list_it"><a href="images.html">Memories</a></li>
+      <li class="list_it"><a href="#">Nice blessings</a></li>
+      <li class="list_it"><a href="#">Item</a></li>
+      <li class="list_it"><a href="#">Item</a></li>
+
+    </ul>
+  </div>
+
+  <div class="container">
+    <span class="my_header">Title of my Image</span>
+    <img src="../res/img/butterfly.jpg" alt="">
+    <p class="image_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <span id="my_links">
+      <a href="images.html">Link 1</a>
+      <a href="#">Link 1</a>
+    </span>
+  </div>
+
+  <div class="container">
+    <span class="my_header">Title of my Image</span>
+    <img src="../res/img/butterfly.jpg" alt="">
+    <p class="image_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <span id="my_links">
+      <a href="images.html">Link 1</a>
+      <a href="#">Link 1</a>
+    </span>
+  </div>
+
+  <script type="text/javascript">
+    $(function() {
+      // this will get the full URL at the address bar
+      var url = window.location.href;
+
+      // passes on every "a" tag
+      $("#nav_menu a").each(function() {
+        // checks if its the same on the address bar
+        if (url.indexOf(this.href) >= 0 ) {
+          $(this).closest("li").addClass("active");
+          //for making parent of submenu active
+          //$(this).closest("li").parent().parent().addClass("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
